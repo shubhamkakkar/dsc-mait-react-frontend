@@ -1,0 +1,9 @@
+.navigationTiles {
+    border-radius: 20px;
+    transition-timing-function: linear;
+    transition: 0.5s;
+}
+
+.navigationTiles:hover{
+    background-color: red;
+}
