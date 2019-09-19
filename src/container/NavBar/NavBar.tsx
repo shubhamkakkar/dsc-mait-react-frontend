@@ -2,10 +2,13 @@ import React from "react";
 import {AppBar, Grid, Toolbar, Button, Typography} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles';
 import cssClasses from "./NavBar.module.css"
+
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1,
-    },
+        backgroundColor: "#fff",
+        position: "sticky",
+        top: "0"
+    }
 }));
 
 function NavigationOptions() {
@@ -24,9 +27,9 @@ function NavigationOptions() {
                         xs={3}
                         style={{textAlign: "center"}}
                     >
-                         <Typography className={cssClasses.navigationTiles}>
-                             {res}
-                         </Typography>
+                        <p className={cssClasses.navigationTiles}>
+                            {res}
+                        </p>
                     </Grid>
                 ))
             }
@@ -37,23 +40,27 @@ function NavigationOptions() {
 export default function NavBar() {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <Grid container spacing={3}>
-                        <Grid
-                            item
-                               xs={3}
-                            style={{textAlign: "center"}}
-                        >
-                            logo
-                        </Grid>
-                        <Grid item xs={8}>
-                            <NavigationOptions/>
-                        </Grid>
+        <AppBar className={classes.root}>
+            <Toolbar>
+                <Grid container>
+                    <Grid
+                        item
+                        xs={3}
+                        style={{textAlign: "center"}}
+                    >
+                        logo
                     </Grid>
-                </Toolbar>
-            </AppBar>
-        </div>
+                    <Grid item xs={8}>
+                        <NavigationOptions/>
+                    </Grid>
+                </Grid>
+            </Toolbar>
+        </AppBar>
     )
 };
+
+
+// here will be a bottom bar which on scroll would move along it and would then get fiexd at top, with change in background color!!
+// for phone,
+//         an animated toolbar would be present,
+//     a right corner sticky aspect which on clinck would bounce open as a full screen model

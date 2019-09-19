@@ -2,8 +2,21 @@
     border-radius: 20px;
     transition-timing-function: linear;
     transition: 0.5s;
+    color: black;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+    display: flex;
+    justify-content: center;
 }
 
 .navigationTiles:hover{
-    background-color: red;
+    cursor: pointer;
+    color: #E1382B;
+    transform: translateZ(1);
+
+}
+
+.root {
+
 }
