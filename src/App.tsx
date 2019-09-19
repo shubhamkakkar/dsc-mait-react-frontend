@@ -9,14 +9,13 @@ import {
 } from "./container"
 const App: React.FC = () => {
   return (
-    <>
-      <NavBar />
+    <React.Fragment>
       <LandingPage />
       <TechnologiesWeWillTeach />
       <Events />
       <Team />
       <Footer />
-    </>
+    </React.Fragment>
 
   );
 };

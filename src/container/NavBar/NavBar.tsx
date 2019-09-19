@@ -43,7 +43,7 @@ export default function NavBar() {
                     <Grid container spacing={3}>
                         <Grid
                             item
-                            xs={3}
+                               xs={3}
                             style={{textAlign: "center"}}
                         >
                             logo
