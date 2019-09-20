@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 
 function NavigationOptions() {
     return (
-        <Grid container spacing={3}>
+        <Grid container>
             {
                 [
                     "Link 1",

@@ -3,14 +3,8 @@ import Grid from "@material-ui/core/Grid";
 import landingPage from "../../assets/images/landinpage.png"
 import classes from "./LandingPage.module.css"
 import BounceArrowAnimation from "../../components/BounceArrowAnimation/BounceArrowAnimation";
+import Letter from '../../components/Letter/Letter'
 
-function Letter({letter, color}: { letter: string, color: string }) {
-    return (
-        <span style={{color}}>
-            {letter}
-        </span>
-    )
-}
 
 export default function LandingPage() {
     return (

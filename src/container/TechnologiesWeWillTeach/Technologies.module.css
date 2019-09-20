@@ -1,0 +1,22 @@
+.hexagonNode{
+    text-align: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagonNode div {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 2%;
+    margin-top: 10px;
+
+}
+
+.hexagonNode div:hover{
+    cursor: pointer;
+}
