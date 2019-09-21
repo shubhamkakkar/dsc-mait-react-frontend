@@ -20,3 +20,10 @@
 .hexagonNode div:hover{
     cursor: pointer;
 }
+
+.gridContainer {
+
+    background: #9d50bb; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9d50bb, #6e48aa); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9d50bb, #6e48aa);
+}
