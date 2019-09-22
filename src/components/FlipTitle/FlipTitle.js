@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {animated, useSpring} from "react-spring";
-import Grid from "@material-ui/core/Grid";
-
+import css from "./FlipTitle.module.css"
 export default function FlipTitle({title, borderColor, src}) {
     const [flipped, set] = useState(false);
     const {transform, opacity} = useSpring({
@@ -11,7 +10,10 @@ export default function FlipTitle({title, borderColor, src}) {
     });
 
     return (
-        <div style={{width: 100, height: 100, display: "flex", flex: 1, justifyContent: "center"}}
+
+        <div
+            className={css.imageLogo}
+            style={{display: "flex", flex: 1, justifyContent: "center"}}
              onMouseEnter={() => set(state => true)}
              onMouseLeave={() => set(sate => false)}
              onClick={() => set(state => !flipped)}
@@ -20,13 +22,11 @@ export default function FlipTitle({title, borderColor, src}) {
                 position: "absolute",
                 willChange: "transform, opacity",
                 opacity: opacity.interpolate(op => 1 - op),
-                transform,
-                padding: "5px",
+                transform
             }}>
-                <div>
-                    <img  {...{src}} alt={`${title} logo`}
-                          style={{objectFit: "container", width: 100, height: 100}}/>
-                </div>
+                <img  {...{src}} alt={`${title} logo`}
+                      className={css.imageLogo}
+                      style={{objectFit: "contain"}}/>
             </animated.div>
             <animated.div
                 style={{
