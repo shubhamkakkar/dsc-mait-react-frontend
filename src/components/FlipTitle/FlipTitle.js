@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {animated, useSpring} from "react-spring";
 import css from "./FlipTitle.module.css"
+
 export default function FlipTitle({title, borderColor, src}) {
     const [flipped, set] = useState(false);
     const {transform, opacity} = useSpring({
@@ -14,9 +15,9 @@ export default function FlipTitle({title, borderColor, src}) {
         <div
             className={css.imageLogo}
             style={{display: "flex", flex: 1, justifyContent: "center"}}
-             onMouseEnter={() => set(state => true)}
-             onMouseLeave={() => set(sate => false)}
-             onClick={() => set(state => !flipped)}
+            onMouseEnter={() => set(state => true)}
+            onMouseLeave={() => set(sate => false)}
+            onClick={() => set(state => !flipped)}
         >
             <animated.div style={{
                 position: "absolute",
@@ -26,7 +27,7 @@ export default function FlipTitle({title, borderColor, src}) {
             }}>
                 <img  {...{src}} alt={`${title} logo`}
                       className={css.imageLogo}
-                      style={{objectFit: "contain"}}/>
+                      style={{objectFit: "contain", cursor: "pointer"}}/>
             </animated.div>
             <animated.div
                 style={{
