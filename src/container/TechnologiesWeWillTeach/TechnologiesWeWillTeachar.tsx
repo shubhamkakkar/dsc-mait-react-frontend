@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid"
 import FlipTileList from "../../components/FlipTileList/FlipTileList";
 import teach from "../../assets/images/teach.png"
+import {Hidden} from "@material-ui/core";
 
 const listA = [
     {
@@ -56,14 +57,16 @@ const TechWeTeach: React.FC = () => (
             </div>
         </Grid>
         <Grid item xs={12}>
-            <Grid container>
+            <Grid container style={{justifyContent: "center"}}>
                 <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
                     <FlipTileList list={listA}/>
                 </Grid>
-                <Grid xs={12} sm={6}>
-                    <img style={{objectFit: "contain", width: "100%"}}
-                         src={teach} alt={"teach"}/>
-                </Grid>
+                <Hidden mdDown>
+                    <Grid xs={12} sm={6} >
+                        <img style={{objectFit: "contain", width: "100%"}}
+                             src={teach} alt={"teach"}/>
+                    </Grid>
+                </Hidden>
                 <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
                     <FlipTileList list={[...listB]}/>
                 </Grid>
