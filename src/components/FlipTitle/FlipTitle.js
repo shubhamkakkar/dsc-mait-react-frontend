@@ -16,25 +16,27 @@ export default function FlipTitle({title, borderColor, src}) {
               onMouseLeave={() => set(sate => false)}
               onClick={() => set(state => !flipped)}
         >
-            <animated.div style={{
-                willChange: "transform, opacity",
-                opacity: opacity.interpolate(op => 1 - op),
-                transform,
-                padding: "5px",
+                <animated.div style={{
+                    position: "absolute",
+                    willChange: "transform, opacity",
+                    opacity: opacity.interpolate(op => 1 - op),
+                    transform,
+                    padding: "5px",
+                    backgroundColor: "green"
+                }}>
+                    <div>
+                        <img  {...{src}} alt={`${title} logo`}
+                              style={{objectFit: "container", width: 100, height: 100}}/>
+                    </div>
 
-            }}>
-                <div>
-                    <img  {...{src}} alt={`${title} logo`}
-                          style={{objectFit: "container", width: 100, height: 100}}/>
-                </div>
-
-            </animated.div>
+                </animated.div>
             <animated.div
                 style={{
                     position: "absolute",
                     willChange: "transform, opacity",
                     opacity,
                     transform: transform.interpolate(t => `${t} rotateX(180deg)`),
+                    backgroundColor: "red"
                 }}>
                 {title}
             </animated.div>
