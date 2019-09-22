@@ -1,8 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid"
 import FlipTileList from "../../components/FlipTileList/FlipTileList";
-import FlipTitle from "../../components/FlipTitle/FlipTitle"
-import css from "./Technologies.module.css"
+import teach from "../../assets/images/teach.png"
 
 const listA = [
     {
@@ -42,32 +41,31 @@ const listB = [
 
 const TechWeTeach: React.FC = () => (
     <Grid container
-        style={{
-            paddingRight: "10%",
-            paddingLeft: "10%",
-            paddingTop: "2.5%",
-            paddingBottom: "2.5%",
-            justifyContent: "center",
-            alignItems: "center",
-        }}
+          style={{
+              paddingRight: "10%",
+              paddingLeft: "10%",
+              paddingTop: "2.5%",
+              paddingBottom: "2.5%",
+              justifyContent: "center",
+              alignItems: "center",
+          }}
     >
         <Grid item xs={12}>
-            <div style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", paddingBottom: "1.5%", }}>
+            <div style={{fontSize: 20, fontWeight: "bold", textAlign: "center", paddingBottom: "1.5%",}}>
                 Technologies We Will Teach
             </div>
         </Grid>
         <Grid item xs={12}>
             <Grid container>
-                <Grid item sm={2} xs={12}>
-                    <FlipTileList list={listA} />
+                <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
+                    <FlipTileList list={listA}/>
                 </Grid>
-                <Grid item sm={8} xs={12}>
-                    <img style={{ objectFit: "contain", width: "100%" }}
-                        src={"https://cdn.dribbble.com/users/1788965/screenshots/5376523/1-01-01.png"} alt={"teach"} />
+                <Grid xs={12} sm={6}>
+                    <img style={{objectFit: "contain", width: "100%"}}
+                         src={teach} alt={"teach"}/>
                 </Grid>
-
-                <Grid item sm={2} xs={12}>
-                    <FlipTileList list={listB} />
+                <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
+                    <FlipTileList list={[...listB]}/>
                 </Grid>
             </Grid>
         </Grid>

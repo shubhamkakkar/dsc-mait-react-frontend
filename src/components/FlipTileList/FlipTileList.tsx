@@ -1,6 +1,6 @@
 import React from "react"
-import Grid from "@material-ui/core/Grid"
 import FlipTitle from "../FlipTitle/FlipTitle";
+import Grid from "@material-ui/core/Grid";
 
 type IList = {
     title: string,
@@ -12,18 +12,15 @@ type IFlipTileList = {
     list: IList[]
 }
 
-export default function FlipTileList({ list }: IFlipTileList) {
+export default function FlipTileList({list}: IFlipTileList) {
     return (
-        <Grid container>
+        <Grid container spacing={3} style={{textAlign: "center", justifyContent: "center"}}>
             {
-                list.map(({ title, src, borderColor }: IList) => (
-                    <Grid item xs={12} style={{ backgroundColor: "yellow" }} >
-                        <FlipTitle {...{ title, src, borderColor }} />
-                    </Grid>
-
-                ))
+                list.map(({title, src, borderColor}: IList) => (
+                        <FlipTitle {...{title, src, borderColor}} />
+                    )
+                )
             }
         </Grid>
     )
-
 }
