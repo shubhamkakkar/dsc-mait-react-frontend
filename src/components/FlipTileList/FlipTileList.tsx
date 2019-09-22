@@ -14,10 +14,12 @@ type IFlipTileList = {
 
 export default function FlipTileList({list}: IFlipTileList) {
     return (
-        <Grid container spacing={3} style={{textAlign: "center", justifyContent: "center"}}>
+        <Grid container spacing={3}>
             {
                 list.map(({title, src, borderColor}: IList) => (
-                        <FlipTitle {...{title, src, borderColor}} />
+                        <Grid item xs={6} sm={12}  style={{ display: "flex",justifyContent: "center" }}>
+                            <FlipTitle {...{title, src, borderColor}} />
+                        </Grid>
                     )
                 )
             }

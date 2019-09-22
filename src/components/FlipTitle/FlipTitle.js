@@ -11,35 +11,35 @@ export default function FlipTitle({title, borderColor, src}) {
     });
 
     return (
-        <Grid item xs={6} sm={12}
-              onMouseEnter={() => set(state => true)}
-              onMouseLeave={() => set(sate => false)}
-              onClick={() => set(state => !flipped)}
+        <div style={{width: 100, height: 100, display: "flex", flex: 1, justifyContent: "center"}}
+             onMouseEnter={() => set(state => true)}
+             onMouseLeave={() => set(sate => false)}
+             onClick={() => set(state => !flipped)}
         >
-                <animated.div style={{
-                    position: "absolute",
-                    willChange: "transform, opacity",
-                    opacity: opacity.interpolate(op => 1 - op),
-                    transform,
-                    padding: "5px",
-                    backgroundColor: "green"
-                }}>
-                    <div>
-                        <img  {...{src}} alt={`${title} logo`}
-                              style={{objectFit: "container", width: 100, height: 100}}/>
-                    </div>
-
-                </animated.div>
+            <animated.div style={{
+                position: "absolute",
+                willChange: "transform, opacity",
+                opacity: opacity.interpolate(op => 1 - op),
+                transform,
+                padding: "5px",
+            }}>
+                <div>
+                    <img  {...{src}} alt={`${title} logo`}
+                          style={{objectFit: "container", width: 100, height: 100}}/>
+                </div>
+            </animated.div>
             <animated.div
                 style={{
-                    position: "absolute",
                     willChange: "transform, opacity",
                     opacity,
                     transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-                    backgroundColor: "red"
+                    display: "flex", flex: 1, justifyContent: "center",
+                    alignItems: "center",
+                    color: borderColor,
+                    textAlign: "center"
                 }}>
                 {title}
             </animated.div>
-        </Grid>
+        </div>
     )
 }
