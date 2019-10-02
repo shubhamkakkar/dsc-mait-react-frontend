@@ -1,0 +1,16 @@
+
+@media screen and (max-width: 600px) {
+    .img {
+       height: 250px;
+       width: 250px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+

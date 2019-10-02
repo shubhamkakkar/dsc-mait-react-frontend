@@ -61,7 +61,7 @@ const TechWeTeach = (props: Object, ref: string) => {
                 </div>
             </Grid>
             <Grid item xs={12}>
-                <Grid container style={{justifyContent: "center"}}>
+                <Grid container style={{justifyContent: "center", padding: "5%"}}>
                     <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
                         <FlipTileList list={listA}/>
                     </Grid>

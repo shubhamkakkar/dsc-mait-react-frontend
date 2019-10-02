@@ -1,6 +1,11 @@
 .cardBackground {
-    border-radius: 20px;
-    background-color: red;
+    transition: transform 1s ease-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.cardBackground:hover {
+    transform: scale(1.1);
 }
 
 .img {

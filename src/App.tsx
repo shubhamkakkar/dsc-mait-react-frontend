@@ -9,6 +9,7 @@ import {
 } from "./container"
 
 const App: React.FC = () => {
+    // @ts-ignore
     const scrollToRef = React.useRef<HTMLDivElement>(null);
     // @ts-ignore
     const scrollTo = () => scrollToRef.current.scrollIntoView({behavior: "smooth"});
