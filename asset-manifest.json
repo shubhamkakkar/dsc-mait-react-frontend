@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dsc-mait-react-frontend/static/css/main.d1171dd6.chunk.css",
-    "main.js": "/dsc-mait-react-frontend/static/js/main.a1ce7362.chunk.js",
-    "main.js.map": "/dsc-mait-react-frontend/static/js/main.a1ce7362.chunk.js.map",
+    "main.css": "/dsc-mait-react-frontend/static/css/main.ed6013a3.chunk.css",
+    "main.js": "/dsc-mait-react-frontend/static/js/main.f4169d05.chunk.js",
+    "main.js.map": "/dsc-mait-react-frontend/static/js/main.f4169d05.chunk.js.map",
     "runtime~main.js": "/dsc-mait-react-frontend/static/js/runtime~main.dac51464.js",
     "runtime~main.js.map": "/dsc-mait-react-frontend/static/js/runtime~main.dac51464.js.map",
-    "static/js/2.0bbedd42.chunk.js": "/dsc-mait-react-frontend/static/js/2.0bbedd42.chunk.js",
-    "static/js/2.0bbedd42.chunk.js.map": "/dsc-mait-react-frontend/static/js/2.0bbedd42.chunk.js.map",
+    "static/js/2.be0985ba.chunk.js": "/dsc-mait-react-frontend/static/js/2.be0985ba.chunk.js",
+    "static/js/2.be0985ba.chunk.js.map": "/dsc-mait-react-frontend/static/js/2.be0985ba.chunk.js.map",
     "index.html": "/dsc-mait-react-frontend/index.html",
-    "precache-manifest.25720b086da877d0a10a6acddb6dd772.js": "/dsc-mait-react-frontend/precache-manifest.25720b086da877d0a10a6acddb6dd772.js",
+    "precache-manifest.703de8ace993017d1ae2f75269b61056.js": "/dsc-mait-react-frontend/precache-manifest.703de8ace993017d1ae2f75269b61056.js",
     "service-worker.js": "/dsc-mait-react-frontend/service-worker.js",
-    "static/css/main.d1171dd6.chunk.css.map": "/dsc-mait-react-frontend/static/css/main.d1171dd6.chunk.css.map",
+    "static/css/main.ed6013a3.chunk.css.map": "/dsc-mait-react-frontend/static/css/main.ed6013a3.chunk.css.map",
     "static/media/landinpage.png": "/dsc-mait-react-frontend/static/media/landinpage.e2ddf1c6.png",
     "static/media/teach.png": "/dsc-mait-react-frontend/static/media/teach.9858f6aa.png"
   }
