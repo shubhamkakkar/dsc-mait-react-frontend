@@ -1,12 +1,31 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import landingPage from "../../assets/images/landinpage.png"
 import classes from "./LandingPage.module.css"
 import BounceArrowAnimation from "../../components/BounceArrowAnimation/BounceArrowAnimation";
 import Letter from '../../components/Letter/Letter'
+import landingPage from "../../assets/images/landinpage.png"
 
 
-export default function LandingPage() {
+export default function LandingPage({scrollTo}: { scrollTo: () => void }) {
+    const [showArrow, setShowArrow] = React.useState(true);
+
+    function handleScroll() {
+        const {
+            scrollY,
+            innerHeight
+        } = window;
+        if (scrollY > innerHeight / 2) {
+            setShowArrow(false)
+        } else {
+            setShowArrow(true)
+        }
+    }
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <Grid
             container
@@ -55,10 +74,11 @@ export default function LandingPage() {
                 </Grid>
             </Grid>
             <Grid item xs={12} sm={6} justify="center" className={classes.flexContainer}>
-                <img src={landingPage} alt={"landing page"} style={{width: "80%", height: "80%"}}/>
+                <img  className={classes.scaleAnimation} src={landingPage} alt={"landing page"}
+                     style={{width: "80%", height: "80%"}}/>
             </Grid>
-            <Grid item xs={12} className={classes.flexContainer}>
-                    <BounceArrowAnimation />
+            <Grid item xs={12} className={classes.flexContainer} style={{opacity: showArrow ? 1 : 0}}>
+                <BounceArrowAnimation {...{scrollTo}} />
             </Grid>
         </Grid>
     )

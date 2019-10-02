@@ -18,14 +18,14 @@ const listA = [
     {
         title: "Android Development",
         borderColor: "#557DBF",
-        src: "https://www.logospng.com/images/55/javacom-userlogosorg-55700.png"
+        src: "https://cdn.iconscout.com/icon/free/png-512/java-43-569305.png"
     },
 ];
 const listB = [
     {
         title: "Data Structure & Algo",
         borderColor: "#189E59",
-        src: "https://www.logospng.com/images/55/javacom-userlogosorg-55700.png"
+        src: "https://cdn.iconscout.com/icon/free/png-512/java-43-569305.png"
     },
     {
         title: "Actions on Google",
@@ -39,43 +39,47 @@ const listB = [
     }
 ];
 
-
-const TechWeTeach: React.FC = () => (
-    <Grid container
-          style={{
-              paddingRight: "10%",
-              paddingLeft: "10%",
-              paddingTop: "2.5%",
-              paddingBottom: "2.5%",
-              justifyContent: "center",
-              alignItems: "center",
-          }}
-    >
-        <Grid item xs={12}>
-            <div style={{fontSize: 20, fontWeight: "bold", textAlign: "center", paddingBottom: "1.5%",}}>
-                Technologies We Will Teach
-            </div>
-        </Grid>
-        <Grid item xs={12}>
-            <Grid container style={{justifyContent: "center"}}>
-                <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
-                    <FlipTileList list={listA}/>
-                </Grid>
-                <Hidden mdDown>
-                    <Grid xs={12} sm={6} >
-                        <img style={{objectFit: "contain", width: "100%"}}
-                             src={teach} alt={"teach"}/>
+const TechWeTeach = (props: Object, ref: string) => {
+    console.log('re', ref);
+    // @ts-ignore
+    return (
+        <Grid
+            id={"scrollToPosition"}
+            container
+            style={{
+                paddingRight: "10%",
+                paddingLeft: "10%",
+                paddingTop: "2.5%",
+                paddingBottom: "2.5%",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <Grid item xs={12}>
+                <div ref={ref} style={{fontSize: 20, fontWeight: "bold", textAlign: "center", paddingBottom: "1.5%",}}>
+                    Technologies We Will Teach
+                </div>
+            </Grid>
+            <Grid item xs={12}>
+                <Grid container style={{justifyContent: "center"}}>
+                    <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
+                        <FlipTileList list={listA}/>
                     </Grid>
-                </Hidden>
-                <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
-                    <FlipTileList list={[...listB]}/>
+                    <Hidden mdDown>
+                        <Grid xs={12} sm={6}>
+                            <img style={{objectFit: "contain", width: "100%"}}
+                                 src={teach} alt={"teach"}/>
+                        </Grid>
+                    </Hidden>
+                    <Grid item sm={3} xs={12} style={{justifyContent: "center", alignItems: "center", display: "flex"}}>
+                        <FlipTileList list={[...listB]}/>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
-
-
-    </Grid>
-)
+    )
+};
 // @ts-ignore
-export default TechWeTeach;
+const TechnologiesWeWillTeach = React.forwardRef(TechWeTeach);
+export default TechnologiesWeWillTeach;
 

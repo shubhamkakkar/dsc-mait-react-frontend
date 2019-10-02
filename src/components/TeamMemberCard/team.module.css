@@ -1,0 +1,67 @@
+.cardBackground {
+    border-radius: 20px;
+    background-color: red;
+}
+
+.img {
+    height: 25px;
+    width: 25px;
+    display: block;
+    margin: auto
+}
+
+
+.bio {
+    line-height: 1.5;
+    color: #616161;
+    text-align: center;
+}
+
+.title {
+    line-height: 1.5;
+    color: #3f51b5;
+    text-align: center;
+}
+
+.subheader {
+    color: #757575;
+    text-align: center;
+}
+
+
+.buttonArrow {
+    padding-top: 10px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+
+.buttonArrow:hover {
+    -moz-animation: flip 2s;
+    -webkit-animation: flip 2s;
+    animation: flip 2s;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-7.5px);
+    }
+}
+
+@keyframes flip {
+    0%, 100% {
+        transform: translateY(0);
+    }
+}
+

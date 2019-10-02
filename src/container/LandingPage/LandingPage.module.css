@@ -4,6 +4,45 @@
      justify-content: center
 }
 
+.scaleAnimation  {
+    -moz-animation: scaleAnimations 5s ease-in-out;
+    -webkit-animation: scaleAnimations 5s ease-in-out;
+    animation: scaleAnimations 5s ease-in-out;
+}
+
+@keyframes scaleAnimations {
+    0% {
+        transform: scale(0);
+    }
+    10% {
+        transform: scale(0.2);
+    }
+    20% {
+        transform: scale(0.4);
+    }
+    30% {
+        transform: scale(0.6);
+    }
+    40% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    90%, 100% {
+        transform: scale(1);
+    }}
+
+
 @media screen and (max-width: 600px) {
      .alignMentMediaQuery {
           text-align: center

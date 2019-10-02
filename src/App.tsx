@@ -7,14 +7,15 @@ import {
     Team,
     TechnologiesWeWillTeach
 } from "./container"
-import Grid from "@material-ui/core/Grid";
 
 const App: React.FC = () => {
+    const scrollToRef = React.useRef<HTMLDivElement>(null);
+    // @ts-ignore
+    const scrollTo = () => scrollToRef.current.scrollIntoView({behavior: "smooth"});
     return (
         <React.Fragment>
-            <LandingPage/>
-            <NavBar/>
-            <TechnologiesWeWillTeach/>
+            <LandingPage {...{scrollTo}} />
+            <TechnologiesWeWillTeach ref={scrollToRef}/>
             <Events/>
             <Team/>
             <Footer/>
