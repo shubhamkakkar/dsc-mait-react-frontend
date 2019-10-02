@@ -40,12 +40,12 @@ export default function LandingPage({scrollTo}: { scrollTo: () => void }) {
                 <Grid container>
                     <Grid item xs={12} style={{marginTop: 10}}>
                         <div className={classes.alignMentMediaQuery}
-                             style={{fontSize: 20, fontWeight: "bold"}}>Developer Student Club
+                             style={{fontSize: 40, fontWeight: "bold"}}>Developer Student Club
                         </div>
                     </Grid>
                     <Grid item xs={12} style={{marginTop: 10}}>
                         <div className={classes.alignMentMediaQuery}
-                             style={{fontSize: 20, fontWeight: "bold"}}>Maharaja Aggrasen Institute Of Technology,
+                             style={{fontSize: 30, fontWeight: "bold"}}>Maharaja Aggrasen Institute Of Technology,
                             GGSIPU
                         </div>
                     </Grid>
